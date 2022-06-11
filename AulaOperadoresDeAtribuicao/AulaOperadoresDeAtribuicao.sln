@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AulaOperadoresDeAtribuicao", "AulaOperadoresDeAtribuicao\AulaOperadoresDeAtribuicao.csproj", "{2CB756A5-4710-4A5D-8ECD-D4936C88FB7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperadoresAritmeticosAtribuicao", "OperadoresAritmeticosAtribuicao\OperadoresAritmeticosAtribuicao.csproj", "{18B9EB2A-F8CC-4B8A-BA4F-938AB0141C0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CB756A5-4710-4A5D-8ECD-D4936C88FB7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB756A5-4710-4A5D-8ECD-D4936C88FB7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB756A5-4710-4A5D-8ECD-D4936C88FB7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB756A5-4710-4A5D-8ECD-D4936C88FB7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B9EB2A-F8CC-4B8A-BA4F-938AB0141C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B9EB2A-F8CC-4B8A-BA4F-938AB0141C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B9EB2A-F8CC-4B8A-BA4F-938AB0141C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B9EB2A-F8CC-4B8A-BA4F-938AB0141C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B97E179D-4899-489C-93CF-CCAE4EB207AA}
+	EndGlobalSection
+EndGlobal
