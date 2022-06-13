@@ -11,6 +11,7 @@ namespace AulaEntradaDeDados_Parte1
             string y = Console.ReadLine();
             string z = Console.ReadLine();
             //string s = Console.ReadLine(); para atribuir a variável especificada
+            //string[] vet = s.Split(' ');
             string[] vet = Console.ReadLine().Split(' '); //Atribuir diretamente ao vetor
             string a = vet[0];
             string b = vet[1];
