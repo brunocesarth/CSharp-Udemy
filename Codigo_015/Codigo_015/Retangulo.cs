@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 
 namespace Codigo_015 {
     class Retangulo {
