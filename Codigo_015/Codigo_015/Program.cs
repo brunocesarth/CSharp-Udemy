@@ -18,7 +18,6 @@ namespace Codigo_015 {
             Console.WriteLine("Área = " + area.ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Perímetro = " + perimetro.ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Diagonal = " + diagonal.ToString("F2", CultureInfo.InvariantCulture));
-
         }
     }
 }
