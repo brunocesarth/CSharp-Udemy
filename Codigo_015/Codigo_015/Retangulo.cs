@@ -4,6 +4,7 @@ namespace Codigo_015 {
     class Retangulo {
         public double Largura;
         public double Altura;
+
         public double Area() {
             return Largura * Altura;
         }
