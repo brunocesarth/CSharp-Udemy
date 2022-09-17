@@ -33,9 +33,6 @@ namespace Codigo_014 {
 
             Console.WriteLine();
             Console.WriteLine("Dados atualizados: " + p);
-
-
-
         }
     }
 }
