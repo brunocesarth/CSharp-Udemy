@@ -9,17 +9,20 @@ namespace Codigo_029 {
         }
 
         public int NumeroConta {
-            get; set;
-        }
+            get; private set;
+        } //Private set, porque não pode ser alterado após a criação
 
         public double Saldo {
-            get; set;
-        }
+            get; private set;
+        } //Private set, porque não pode ser alterado após a criação
 
-        public Conta(string nome, int numeroConta, double saldo) {
+        public Conta(string nome, int numeroConta) {
             Nome = nome;
             NumeroConta = numeroConta;
-            Saldo = saldo;
+        }
+
+        public Conta(string nome, int numeroConta, double depositoInicial) : this(nome, numeroConta) {
+            Deposito(depositoInicial);
         }
 
         public void Deposito(double valor) {
