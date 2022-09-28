@@ -27,6 +27,7 @@ namespace Codigo_043 {
             Console.Write("Entre com o ID do funcionário que irá receber um aumento de salário: ");
             id = int.Parse(Console.ReadLine());
 
+
             foreach (Funcionario obj in listaDeFuncionarios) {
                 Console.WriteLine(obj);
             }
