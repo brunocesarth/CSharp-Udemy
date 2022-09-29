@@ -20,17 +20,18 @@ namespace Codigo_043 {
                 string nome = Console.ReadLine();
                 Console.Write("Salário: ");
                 double salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                listaDeFuncionarios.Add(funcionario = new Funcionario(id, nome, salario));
+                funcionario = new Funcionario(id, nome, salario);
+                listaDeFuncionarios.Add(funcionario);
                 Console.WriteLine();
             }
 
-            Console.Write("Entre com o ID do funcionário que irá receber um aumento de salário: ");
+            Console.Write("Qual o id do funcionário que irá receber aumento: ");
             id = int.Parse(Console.ReadLine());
+            Funcionario funcionario1 = new Funcionario(id);
 
+            listaDeFuncionarios.Contains(funcionario1);
 
-            foreach (Funcionario obj in listaDeFuncionarios) {
-                Console.WriteLine(obj);
-            }
+            Console.WriteLine(funcionario1);
         }
     }
 }
