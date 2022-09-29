@@ -27,7 +27,7 @@ namespace Codigo_043 {
             Console.Write("Qual o id do funcionário que irá receber aumento: ");
             int buscaId = int.Parse(Console.ReadLine());
 
-            Funcionario func = listaDeFuncionarios.Find(func => func.Id == buscaId);
+            Funcionario func = listaDeFuncionarios.Find(x => x.Id == buscaId);
 
             if (func != null) {
                 Console.Write("Qual a porcentagem será aumentada no salário? ");
