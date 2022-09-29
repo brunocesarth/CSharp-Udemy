@@ -12,12 +12,8 @@ namespace Codigo_043 {
             Salario = salario;
         }
 
-        public Funcionario(int id) {
-            Id = id;
-        }
-
         public void AumentaSalario(double porcentagem) {
-            Salario += Salario * porcentagem;
+            Salario += (Salario * porcentagem) / 100.00;
         }
 
         public override string ToString() {

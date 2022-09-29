@@ -25,12 +25,23 @@ namespace Codigo_043 {
             }
 
             Console.Write("Qual o id do funcionário que irá receber aumento: ");
-            id = int.Parse(Console.ReadLine());
-            Funcionario funcionario1 = new Funcionario(id);
+            int buscaId = int.Parse(Console.ReadLine());
 
-            listaDeFuncionarios.Contains(funcionario1);
+            Funcionario func = listaDeFuncionarios.Find(func => func.Id == buscaId);
 
-            Console.WriteLine(funcionario1);
+            if (func != null) {
+                Console.Write("Qual a porcentagem será aumentada no salário? ");
+                double porcentagem = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                func.AumentaSalario(porcentagem);
+            } else {
+                Console.WriteLine("O ID informado não foi encontrado.");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Lista atualizada de funcionários");
+            foreach (Funcionario obj in listaDeFuncionarios) {
+                Console.WriteLine(obj);
+            }
         }
     }
 }
