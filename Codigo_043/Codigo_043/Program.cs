@@ -20,8 +20,7 @@ namespace Codigo_043 {
                 string nome = Console.ReadLine();
                 Console.Write("Salário: ");
                 double salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                funcionario = new Funcionario(id, nome, salario);
-                listaDeFuncionarios.Add(funcionario);
+                listaDeFuncionarios.Add(new Funcionario(id, nome, salario));
                 Console.WriteLine();
             }
 
