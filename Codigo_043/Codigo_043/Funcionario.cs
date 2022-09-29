@@ -17,7 +17,11 @@ namespace Codigo_043 {
         }
 
         public override string ToString() {
-            return Id + ", " + Nome + ", " + Salario.ToString("F2", CultureInfo.InvariantCulture);
+            return Id 
+                + ", " 
+                + Nome 
+                + ", " 
+                + Salario.ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
