@@ -24,26 +24,29 @@ namespace Codigo_062
 
             Console.Write("How many items to this order? ");
             int n = int.Parse(Console.ReadLine());
-            DateTime moment = DateTime.Now;
-            Order order = new Order(moment, status);
+
+            Order order = new Order(DateTime.Now, status, client);
 
             for (int i = 1; i <= n; i++)
             {
                 Console.WriteLine($"Enter #{i} item data:");
                 Console.Write("Product name: ");
-                name = Console.ReadLine();
+                string productName = Console.ReadLine();
                 Console.Write("Product price: ");
                 double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                Product product = new Product(productName, price);
+
                 Console.Write("Quantity: ");
                 int quantity = int.Parse(Console.ReadLine());
-                Product product = new Product(name, price);
-                OrderItem orderItem = new OrderItem(quantity, price);
-                order = new Order(moment, status, product);
+
+                OrderItem orderItem = new OrderItem(quantity, price, product);
                 order.AddItem(orderItem);
             }
 
+            Console.WriteLine();
             Console.WriteLine("ORDER SUMMARY:");
-            Console.WriteLine(order);
+            Console.Write(order);
         }
     }
 }

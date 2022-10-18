@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Codigo_062.Entities;
 using Codigo_062.Entities.Enums;
-
+using System.Globalization;
 
 namespace Codigo_062.Entities
 {
@@ -12,20 +11,15 @@ namespace Codigo_062.Entities
         public DateTime Moment { get; set; }
         public OrderStatus Status { get; set; }
         public Client Client { get; set; }
-        public Product Product { get; set; }
         public List<OrderItem> Items { get; set; } = new List<OrderItem>();
 
         public Order() { }
 
-        public Order(DateTime moment, OrderStatus status)
+        public Order(DateTime moment, OrderStatus status, Client client)
         {
             Moment = moment;
             Status = status;
-        }
-
-        public Order(DateTime moment, OrderStatus status, Product product) : this(moment, status)
-        {
-            Product = product;
+            Client = client;
         }
 
         public void AddItem(OrderItem item)
@@ -37,27 +31,28 @@ namespace Codigo_062.Entities
             Items.Remove(item);
         }
 
-        public double Total(double valor)
+        public double Total()
         {
-            double sum = 0;
-            return sum += valor;
+            double sum = 0.0;
+            foreach (OrderItem item in Items)
+            {
+                sum += item.SubTotal();
+            }
+            return sum;
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("Order moment: ");
-            sb.AppendLine(Moment.ToString("dd/MM/yyyy HH:mm:ss"));
-            sb.Append("Order status: ");
-            sb.AppendLine(Status.ToString());
-            sb.Append("Client: ");
-            //sb.AppendLine(Client.ToString());
+            sb.AppendLine("Order moment: " + Moment.ToString("dd/MM/yyyy HH:mm:ss"));
+            sb.AppendLine("Order status: " + Status);
+            sb.AppendLine("Client: " + Client);
             sb.AppendLine("Order items: ");
             foreach (OrderItem item in Items)
             {
                 sb.AppendLine(item.ToString());
             }
-            sb.Append("Total price: ");
+            sb.AppendLine("Total price: $" + Total().ToString("F2", CultureInfo.InvariantCulture));
             return sb.ToString();
         }
     }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Codigo_062.Entities
+﻿namespace Codigo_062.Entities
 {
     class Product
     {

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 
 namespace Codigo_062.Entities
 {
@@ -19,13 +18,11 @@ namespace Codigo_062.Entities
 
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.Append(Name);
-            sb.Append($"({BirthDate})");
-            sb.Append(" - ");
-            sb.Append(Email);
-
-            return sb.ToString();            
+            return Name
+                + ", ("
+                + BirthDate.ToString("dd/MM/yyyy")
+                + ") - "
+                + Email;
         }
     }
 }
