@@ -31,7 +31,7 @@ namespace Codigo_069
 
             foreach (Account acc in list)
             {
-                Console.WriteLine("Updated balance for accout "
+                Console.WriteLine("Updated balance for account "
                     + acc.Number
                     + ": "
                     + acc.Balance.ToString("F2", CultureInfo.InvariantCulture)
