@@ -34,10 +34,7 @@ namespace Codigo_069
                 Console.WriteLine("Updated balance for account "
                     + acc.Number
                     + ": "
-                    + acc.Balance.ToString("F2", CultureInfo.InvariantCulture)
-                    );
-                ;
-                ;
+                    + acc.Balance.ToString("F2", CultureInfo.InvariantCulture));
             }
         }
     }
