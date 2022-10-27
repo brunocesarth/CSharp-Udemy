@@ -36,11 +36,11 @@ namespace Codigo_074
             }
             catch (FormatException e)
             {
-                Console.WriteLine("Format erro: " + e.Message);
+                Console.WriteLine("Format error: " + e.Message);
             }
             catch (Exception e)
             {
-                Console.WriteLine("Unexpected erro: " + e.Message);
+                Console.WriteLine("Unexpected error: " + e.Message);
             }
         }
     }
