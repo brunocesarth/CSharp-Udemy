@@ -29,10 +29,9 @@ namespace Xadrez
             for (int i = 0; i < tab.Linhas; i++)
             {
                 Console.Write(8 - i + " ");
-
                 for (int j = 0; j < tab.Colunas; j++)
                 {
-                    if (posicoesPossiveis[i, j])
+                    if (posicoesPossiveis[i, j] == true)
                     {
                         Console.BackgroundColor = fundoAlterado;
                     }
@@ -41,6 +40,7 @@ namespace Xadrez
                         Console.BackgroundColor = fundoOriginal;
                     }
                     ImprimirPeca(tab.Peca(i, j));
+                    Console.BackgroundColor = fundoOriginal;
                 }
                 Console.WriteLine();
             }
@@ -53,7 +53,6 @@ namespace Xadrez
             string s = Console.ReadLine();
             char coluna = s[0];
             int linha = int.Parse(s[1] + "");
-
             return new PosicaoXadrez(coluna, linha);
         }
 

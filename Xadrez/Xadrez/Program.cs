@@ -15,18 +15,18 @@ namespace Xadrez
                 while (!partida.Terminada)
                 {
                     Console.Clear();
-                    Tela.ImprimirTabuleiro(partida.tab);
+                    Tela.ImprimirTabuleiro(partida.Tab);
 
                     Console.WriteLine();
-
                     Console.Write("Origem: ");
                     Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
 
-                    bool[,] possicoesPossiveis = partida.tab.Peca(origem).MovimentosPossiveis();
+                    bool[,] possicoesPossiveis = partida.Tab.Peca(origem).MovimentosPossiveis();
 
                     Console.Clear();
-                    Tela.ImprimirTabuleiro(partida.tab, possicoesPossiveis);
+                    Tela.ImprimirTabuleiro(partida.Tab, possicoesPossiveis);
 
+                    Console.WriteLine();
                     Console.Write("Destino: ");
                     Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
 
