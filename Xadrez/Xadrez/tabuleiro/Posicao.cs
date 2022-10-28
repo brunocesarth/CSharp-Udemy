@@ -11,6 +11,12 @@
             Coluna = coluna;
         }
 
+        public void DefinirValores(int linha, int coluna)
+        {
+            Linha = linha;
+            Coluna = Coluna;
+        }
+
         public override string ToString()
         {
             return Linha
