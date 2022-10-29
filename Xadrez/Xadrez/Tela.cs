@@ -55,7 +55,6 @@ namespace Xadrez
 
         public static void ImprimirTabuleiro(Tabuleiro tab)
         {
-
             for (int i = 0; i < tab.Linhas; i++)
             {
                 Console.Write(8 - i + " ");
@@ -78,7 +77,7 @@ namespace Xadrez
                 Console.Write(8 - i + " ");
                 for (int j = 0; j < tab.Colunas; j++)
                 {
-                    if (posicoesPossiveis[i, j] == true)
+                    if (posicoesPossiveis[i, j])
                     {
                         Console.BackgroundColor = fundoAlterado;
                     }
@@ -105,7 +104,6 @@ namespace Xadrez
 
         public static void ImprimirPeca(Peca peca)
         {
-
             if (peca == null)
             {
                 Console.Write("- ");
