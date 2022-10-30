@@ -20,7 +20,7 @@ namespace Codigo_077
             }
             catch (IOException e)
             {
-                Console.WriteLine("An error ocourred");
+                Console.WriteLine("An error occurred");
                 Console.WriteLine(e.Message);
             }
             finally
