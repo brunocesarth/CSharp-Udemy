@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
-using System.Collections.Concurrent;
 using Codigo_086.Entities;
+using Codigo_086.Services;
 
 namespace Codigo_086
 {
@@ -16,12 +16,19 @@ namespace Codigo_086
             DateTime date = DateTime.Parse(Console.ReadLine());
             Console.Write("Contract value: ");
             double value = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Contract contract = new Contract(number, date, value);
             Console.Write("Enter number of installments: ");
-            int installments = int.Parse(Console.ReadLine());
-            
+            int months = int.Parse(Console.ReadLine());
+
+            Contract contract = new Contract(number, date, value);
+
+            ContractService contractService = new ContractService(new PaypalService());
+            contractService.ProcessContract(contract, months);
 
             Console.WriteLine("Installments: ");
+            foreach (Installment installment in contract.Installments)
+            {
+                Console.WriteLine(installment);
+            }
         }
     }
 }

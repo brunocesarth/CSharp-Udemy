@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Codigo_086.Services
+﻿namespace Codigo_086.Services
 {
     interface IOnlinePaymentService
     {
