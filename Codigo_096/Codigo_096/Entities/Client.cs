@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Codigo_096.Entities
+﻿namespace Codigo_096.Entities
 {
     class Client
     {
