@@ -42,7 +42,7 @@ namespace Codigo_117
                 var r = from e in list
                         where e.Salary > sal
                         select e.Email;
-                Print("Email of people whose salary is more than 2000.00: ", r);
+                Print(@"Email of people whose salary is more than " + sal.ToString("F2", CultureInfo.InvariantCulture) + ": ", r);
 
                 var r1 = (from e in list
                           where e.Name[0] == 'M'
