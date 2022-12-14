@@ -6,7 +6,6 @@ using SalesWebMvc.Services.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace SalesWebMvc.Controllers
@@ -71,7 +70,6 @@ namespace SalesWebMvc.Controllers
         {
             try
             {
-
                 await _sellerService.RemoveAsync(id);
                 return RedirectToAction(nameof(Index));
             }
